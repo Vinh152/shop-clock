@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+</head>
+<body>
+    <style>
+        .item1{
+            width: 100%;
+            background-image: url("./banner/banner1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            height: 600px;
+            position: relative;
+        }
+        .item1-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-size: 4vw;
+        }
+    .main-banner-arrow{
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+.main-banner-arrow p{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-banner-arrow p i{
+    color: white;
+}
+
+.main-banner-arrow-left{
+    left: 5px;
+}
+.main-banner-arrow-right{
+    right: 5px;
+}
+.wrap:hover~.main-banner-arrow{
+    display: block;
+    transition: 1s;
+}
+    </style>
+    <div class="wrap" style="position: relative;">
+        <div class="wrap-s single-item">
+        <div class="item1"><div class="item1-text animate__animated animate__backInRight">Hello ngay mai</div></div>
+        <div class="item1"><div class="item1-text animate__animated animate__backInRight">Hello ngay mai</div></div>
+        <div class="item1"><div class="item1-text animate__animated animate__backInRight">Hello ngay mai</div></div>
+        <div class="item1"><div class="item1-text animate__animated animate__backInRight">Hello ngay mai</div></div>
+        <div class="item1"><div class="item1-text animate__animated animate__backInRight">Hello ngay mai</div></div>
+        <div class="item1"><div class="item1-text animate__animated animate__backInRight">Hello ngay mai</div></div>
+        <div class="item1"><div class="item1-text animate__animated animate__backInRight">Hello ngay mai</div></div>
+        </div>
+        <div class="main-banner-arrow main-banner-arrow-left" style="display: none;">
+            <p><i class="fas fa-arrow-left"></i></p>
+        </div>
+        <div class="main-banner-arrow main-banner-arrow-right" style="display: none;">
+            <p><i class="fas fa-arrow-right"></i></p>
+        </div>
+    </div>
+     <!-- thư viện js của jquery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- thư viện js của slick slider -->
+     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <script>
+          $(document).ready(function(){
+            $('.single-item').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: ".main-banner-arrow-left",
+                nextArrow: ".main-banner-arrow-right",
+            });
+        });
+     </script>
+</body>
+</html>
